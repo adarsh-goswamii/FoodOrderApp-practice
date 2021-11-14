@@ -1,0 +1,30 @@
+.card {
+    margin: 1rem;
+    width: 12rem;
+    height: 12rem;
+    background-color: var(--yellow);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--yellow);
+    border: 5px solid #202020;
+    border-radius: 50%;
+    top: -2rem;
+    left: 50%;
+
+}
+
+@media only screen and (max-width: 832px) {
+    
+}
+
+@media only screen and (max-width: 640px) {
+    
+}

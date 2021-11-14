@@ -1,0 +1,59 @@
+.header {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    padding: 0px 8rem;
+    background-color: var(--black);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo img {
+    height: 2rem;
+}
+
+.logo_text {
+    font-size: 1.5rem;
+    font-family: lemon;
+    color: white;
+    margin-left: 10px;
+}
+
+.text_hunger {
+    color: var(--yellow);
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 2rem;
+    align-items: center;
+    pointer-events: none;
+}
+
+.btn_cart {
+    height: 20px;
+}
+
+.btn_text {
+    font-family: poppins-bold;
+    font-size: 1rem;
+}
+
+
+@media only screen and (max-width: 832px) {
+    .header {
+        padding: 0px 5rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .header {
+        padding: 0px 2rem;
+    }
+}

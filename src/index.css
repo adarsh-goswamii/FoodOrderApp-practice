@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  --yellow: #FFD60A;
+  --black: #202020;
+  background-color: #EDEDED;
+  font-family: poppins;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppins-medium;
+  src: url(./fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: poppins-bold;
+  src: url(./fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: poppins-bolder;
+  src: url(./fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: poppins-light;
+  src: url(./fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: lemon;
+  src: url(./fonts/Lemon\ Tuesday.otf);
+}
+
+@media only screen and (min-width: 1280px) {
+  body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #root {
+    width: 1280px;
+  }
+}

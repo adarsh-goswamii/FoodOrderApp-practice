@@ -1,0 +1,59 @@
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 8rem;
+    background-image: url(../resources/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    /* z-index: -1; */
+}
+
+.banner_text {
+    z-index: 2;
+}
+
+.heading {
+    font-size: 4rem;
+    font-family: poppins-bolder;
+}
+
+.subheading {
+    font-size: 2rem;
+    font-family: poppins-medium;
+    margin-bottom: 1rem;
+}
+
+.btn_text {
+    font-family: poppins-medium;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 832px){
+    .banner {
+        padding: 2rem 5rem;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .banner {
+        padding: 2rem;
+    }
+
+    .btn_text {
+        font-size: 1rem;
+    }
+}
