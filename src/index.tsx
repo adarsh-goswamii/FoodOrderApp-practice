@@ -3,13 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Header from './components/Header';
 import Banner from './components/Banner';
-import Card from './components/Card';
+import PizzaCard from './components/PizzaCard';
+import CardContainer from './components/CardContainer';
+import FoodContainer from './components/FoodContainer';
+import { StateContextProvider } from './store/state-context';
+import Footer from './components/Footer';
+
+import PIZZA from './resources/italianpizza.jpg'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Header></Header>
-    <Banner></Banner>
-    <Card></Card>
-  </React.StrictMode>,
+  <StateContextProvider>
+    <div style={{ width: '100%', overflow: 'hidden' }}>
+      <Header></Header>
+      <Banner></Banner>
+      <CardContainer />
+      <FoodContainer>
+        <>
+          <PizzaCard name='Italian Pizza' image={PIZZA} />
+          <PizzaCard name='Neapolitan Pizza' image={PIZZA} />
+          <PizzaCard name='California Pizza' image={PIZZA} />
+        </>
+      </FoodContainer>
+      <Footer />
+    </ div>
+  </StateContextProvider>,
   document.getElementById('root')
 );

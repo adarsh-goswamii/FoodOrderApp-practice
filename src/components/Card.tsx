@@ -1,30 +1,27 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import styles from '../style/card.module.css';
 import { motion, useAnimation } from 'framer-motion';
+import StateContext from '../store/state-context';
 
-interface CardProps{
+interface CardProps {
     category: string;
-    icon ?: any;
-
+    icon: string;
 }
 
-const Card: React.FC<CardProps>= ({ category, icon })=> {
+const Card: React.FC<CardProps>= ({ category, icon }) => {
+    const controls = useAnimation();
+    const context = useContext(StateContext);
 
-    const controls= useAnimation();
-
-    // function start() {
-    //     controls.start({
-    //         background: 
-    //     });
-    // }
-
+    console.log("context card", context.cardActive);
     return (
-        <motion.div className={styles.card}>
-            <motion.div>
-                <img src={icon} alt="icon" />
-            </motion.div>
-            {category}
-        </motion.div>
+        <div 
+            onClick={()=> context.setCardActive(category)}
+            className={`${styles.card} ${context.cardActive === category? styles.active: ' '}`}>
+            <div className={styles.icon_container}>
+                <img className={styles.icon} src={icon} alt="icon" />
+            </div>
+            <p className={styles.text}>{category}</p>
+        </div>
     );
 }
 

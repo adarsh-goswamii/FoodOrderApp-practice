@@ -1,30 +1,79 @@
 .card {
-    margin: 1rem;
-    width: 12rem;
-    height: 12rem;
-    background-color: var(--yellow);
+    width: 14rem;
+    height: 8rem;
+    background-color: var(--black);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.icon_container {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 5px solid var(--yellow);
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
 }
 
 .icon {
-    position: absolute;
-    width: 4rem;
-    height: 4rem;
-    background-color: var(--yellow);
-    border: 5px solid #202020;
-    border-radius: 50%;
-    top: -2rem;
-    left: 50%;
+    width: 70%;
+    height: 70%;
+}
 
+.active {
+    background-color: var(--yellow);
+}
+
+.text {
+    color: #fff;
+    font-family: poppins-bolder;
+    font-size: 1.3rem;
+    letter-spacing: .4rem;
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 950px) {
+    .card {
+        width: 12rem;
+        height: 7rem;
+    }
+
+    .icon_container {
+        width: 4rem;
+        height: 4rem;
+        top: -2rem;
+    }
 }
 
 @media only screen and (max-width: 832px) {
-    
+    .card {
+        width: 10rem;
+        height: 7rem;
+    }
+
+    .text {
+        letter-spacing: .2rem;
+    }
 }
 
 @media only screen and (max-width: 640px) {
-    
+    .card {
+        width: 30%;
+        height: 6rem;
+    }
+
+    .text {
+        letter-spacing: 0;
+        font-size: 1rem;
+    }
 }

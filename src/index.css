@@ -10,6 +10,8 @@ body {
   --black: #202020;
   background-color: #EDEDED;
   font-family: poppins;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 @font-face {

@@ -1,0 +1,56 @@
+.footer {
+    height: 7rem;;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0rem 8rem 1rem;
+    position: relative;
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wave {
+    width: 150%;
+    position: absolute;
+    top: -3rem;
+    left: -20rem;
+    z-index: -1;
+}
+
+.icon {
+    font-size: 2rem;
+    color: white;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: var(--yellow);
+}
+
+.text {
+    width: 60%;
+}
+
+@media only screen and (max-width: 832px) {
+    .footer {
+        padding: 0rem 5rem 1rem;
+    }
+
+    .wave {
+        left:0;
+        top: 0;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .footer {
+        padding: 2rem;
+        background-color: var(--black);
+    }
+
+    .wave {
+        width: 100%;
+    }
+}
