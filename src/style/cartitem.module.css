@@ -1,0 +1,50 @@
+.cartItem {
+    width: 100%;
+    height: 8rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    transform: translateX(20rem);
+}
+
+.image {
+    width: 30%;
+    height: 100%;
+}
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.price {
+    color: var(--black);
+}
+
+.topping {
+    margin-right: 1rem;
+}
+
+.heading {
+    font-size: 1rem;
+    font-family: poppins-bold;
+}
+
+.btn {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn_text {
+    font-family: poppins-bold;
+    font-size: 1rem;
+}
+
+.icon {
+    font-size: 1rem;
+}

@@ -8,12 +8,14 @@ import CardContainer from './components/CardContainer';
 import FoodContainer from './components/FoodContainer';
 import { StateContextProvider } from './store/state-context';
 import Footer from './components/Footer';
+import Drawer from './components/Drawer';
 
 import PIZZA from './resources/italianpizza.jpg'
 
 ReactDOM.render(
   <StateContextProvider>
     <div style={{ width: '100%', overflow: 'hidden' }}>
+      <Drawer />
       <Header></Header>
       <Banner></Banner>
       <CardContainer />

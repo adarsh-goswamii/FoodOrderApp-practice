@@ -8,9 +8,11 @@ interface ButtonProps {
     width?: string;
     borderRadius?: string;
     animateBr?: string[];
+    onClick?: any;
+    color?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, height, width, borderRadius, animateBr })=> {
+const Button: React.FC<ButtonProps> = ({ children, height, width, borderRadius, animateBr, onClick, color })=> {
     const control= useAnimation();
 
     function animate(): void {
@@ -26,8 +28,11 @@ const Button: React.FC<ButtonProps> = ({ children, height, width, borderRadius, 
         <motion.button 
             animate={control}
             className={styles.button} 
-            onClick={()=> animate()}
-            style={{ width: width, height: height, borderRadius: borderRadius}}>
+            onClick={()=> {
+                if(onClick=== undefined) animate()
+                else onClick();
+            }}
+            style={{ width: width, height: height, borderRadius: borderRadius, background: color}}>
             {children}
         </motion.button>
     );
