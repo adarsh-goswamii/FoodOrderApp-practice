@@ -63,3 +63,25 @@
     margin-left: 1rem;
     color: var(--yellow);
 }
+
+@media only screen and (max-width: 640px) {
+    .card {
+        width: 95%;
+    }
+
+    .img_container {
+        width: 10%;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .img {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .info {
+        width: 100%;
+    }
+}
