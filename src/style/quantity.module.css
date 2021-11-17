@@ -1,0 +1,31 @@
+.qty {
+    height: 2rem;
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.quantity {
+    margin: 2rem 0rem;
+    display: flex;
+    align-items: center;
+}
+
+.icon1, .icon2 {
+    width: 18px;
+    position: absolute;
+    right: 1px;
+    pointer-events: none;
+    font-size: 18px;
+}
+
+.icon1 {
+    top: 4px;
+    font-size: 18px;
+}
+
+.icon2 {
+    top: 13px;
+}
+
+.div {
+    position: relative;
+}

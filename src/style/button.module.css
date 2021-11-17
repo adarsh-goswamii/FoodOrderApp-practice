@@ -8,6 +8,12 @@
     background-color: var(--yellow);
     pointer-events: all;
     cursor: pointer;
+    pointer-events: all;
+}
+
+.block {
+    background-color: #9d0208;
+    pointer-events: none;
 }
 
 @media only screen and (max-width: 640px) {

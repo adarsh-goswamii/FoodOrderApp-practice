@@ -10,9 +10,10 @@ interface ButtonProps {
     animateBr?: string[];
     onClick?: any;
     color?: string;
+    block?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, height, width, borderRadius, animateBr, onClick, color })=> {
+const Button: React.FC<ButtonProps> = ({ children, height, width, borderRadius, animateBr, onClick, color, block })=> {
     const control= useAnimation();
 
     function animate(): void {
@@ -27,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({ children, height, width, borderRadius, 
     return (
         <motion.button 
             animate={control}
-            className={styles.button} 
+            className={`${styles.button} ${block? styles.block: ''}`} 
             onClick={()=> {
                 if(onClick=== undefined) animate()
                 else onClick();

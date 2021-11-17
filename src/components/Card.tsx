@@ -12,7 +12,7 @@ const Card: React.FC<CardProps>= ({ category, icon }) => {
     const controls = useAnimation();
     const context = useContext(StateContext);
 
-    console.log("context card", context.cardActive);
+    // console.log("context card", context.cardActive);
     return (
         <div 
             onClick={()=> context.setCardActive(category)}

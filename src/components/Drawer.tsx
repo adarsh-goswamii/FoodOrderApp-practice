@@ -19,7 +19,7 @@ const Drawers: React.FC<DrawerProps> = ({ }) => {
             transition: {
                 type: "spring",
                 stiffness: 30,
-                restDelta: 2, 
+                restDelta: 2,
                 staggerChildren: 0.07,
                 delayChildren: 0.2
             }
@@ -39,7 +39,7 @@ const Drawers: React.FC<DrawerProps> = ({ }) => {
     };
 
     return (
-        // <motion.div className={styles.overlay}>
+
         <motion.div
             animate={context.cartVisible ? 'open' : 'close'}
             variants={cartVariants}
@@ -64,7 +64,6 @@ const Drawers: React.FC<DrawerProps> = ({ }) => {
                     ))
             }
         </motion.div>
-        // </motion.div>
     );
 }
 

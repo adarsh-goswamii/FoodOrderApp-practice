@@ -48,3 +48,9 @@
 .icon {
     font-size: 1rem;
 }
+
+@media only screen and (max-width: 640px) {
+    .cartItem {
+        padding: 1rem 0rem;
+    }
+}
