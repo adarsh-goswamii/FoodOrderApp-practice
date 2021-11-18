@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import StateContext from '../store/state-context';
 import styles from '../style/pizzacard.module.css';
 import Button from './Button';
+import { motion } from 'framer-motion';
 
 interface PizzaCardProps {
     name: string;
@@ -11,7 +12,8 @@ interface PizzaCardProps {
 const PizzaCard: React.FC<PizzaCardProps>= ({ name, image })=> {
     const context= useContext(StateContext);
     return (
-        <div className={styles.card} style={{ backgroundImage: `url(${image})`}}>
+        <motion.div
+            className={styles.card} style={{ backgroundImage: `url(${image})` }}>
             <p className={styles.text}>{name}</p>
             <Button width='80%' onClick={()=> {
                 console.log(name, 'clicked');
@@ -21,7 +23,7 @@ const PizzaCard: React.FC<PizzaCardProps>= ({ name, image })=> {
             }} >
                 <p className={styles.btn_text}>{'Order Now >>'}</p>
             </Button>
-        </div>
+        </motion.div>
     )
 }
 

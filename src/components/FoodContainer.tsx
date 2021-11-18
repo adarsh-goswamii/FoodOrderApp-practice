@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../style/foodcontainer.module.css';
+import { motion } from 'framer-motion';
 
 interface PizzaContainerProps {
     children?: JSX.Element;
@@ -7,9 +8,9 @@ interface PizzaContainerProps {
 
 const FoodContainer: React.FC<PizzaContainerProps> = ({ children }) => {
     return (
-        <div className={styles.container}>
+        <motion.div layout className={styles.container}>
             {children}
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,3 +1,7 @@
+###### website link: https://eloquent-bhabha-afadc1.netlify.app/
+
+###### This is a practice project for useReducer hook, 'framer-motion', React Context, typescript and React portals.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
